@@ -47,7 +47,7 @@ public class Library {
         }
         return keyMaps
                 .stream()
-                .map((Map theKeyMap) -> theKeyMap.get(theKey).toString())
+                .map((theKeyMap) -> theKeyMap.get(theKey))
                 .collect(Collectors.toList());
     }
 }

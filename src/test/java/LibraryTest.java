@@ -174,9 +174,9 @@ public class LibraryTest {
 
     @Test
     public void joinReturnsTheStringsConcatenatedTogetherWithDelimiterWhenMultipleStringsArePassedInAndNoDelimeter() {
-        List<String> stringArray = Arrays.asList("this", "is", "a", "sentence", "-");
+        List<String> stringArray = Arrays.asList("this", "is", "a", "sentence");
 
         String result = Library.join(stringArray, "-");
-        assertEquals("this-is-a-sentence--", result);
+        assertEquals("this-is-a-sentence", result);
     }
 }

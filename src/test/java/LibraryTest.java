@@ -4,6 +4,7 @@
 import org.junit.Test;
 
 import java.util.*;
+import java.util.stream.Collector;
 
 import static org.junit.Assert.*;
 
@@ -132,5 +133,50 @@ public class LibraryTest {
 
         List<String> result = Library.pluck(keyMaps, "foo");
         assertEquals(Arrays.asList("bar", "dang", "daddy"), result);
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void joinThrowsAnExceptionWithNull() {
+        Library.join(null);
+    }
+
+    @Test
+    public void joinReturnsAnEmptySpaceWhenAnEmptyArrayIsPassedIn() {
+        List<String> emptyArray = Collections.emptyList();
+        String result = Library.join(emptyArray);
+
+        assertEquals("", result);
+    }
+
+    @Test
+    public void joinReturnsTheStringwhenOnlyOneStringIsPassedIn() {
+        List<String> stringArray = Arrays.asList("string");
+        String result = Library.join(stringArray);
+
+        assertEquals("string", result);
+    }
+
+    @Test
+    public void joinReturnsTheStringWithTheDelimeterwhenADelimeterIsPassedIn() {
+        List<String> stringArray = Arrays.asList("string", "-");
+        String result = Library.join(stringArray);
+
+        assertEquals("string -", result);
+    }
+
+    @Test
+    public void joinReturnsTheStringsConcatenatedTogetherWhenMultipleArePassedInAndNoDelimeter() {
+        List<String> stringArray = Arrays.asList("this", "is", "a", "sentence");
+
+        String result = Library.join(stringArray);
+        assertEquals("this is a sentence", result);
+    }
+
+    @Test
+    public void joinReturnsTheStringsConcatenatedTogetherWithDelimiterWhenMultipleStringsArePassedInAndNoDelimeter() {
+        List<String> stringArray = Arrays.asList("this", "is", "a", "sentence", "-");
+
+        String result = Library.join(stringArray, "-");
+        assertEquals("this-is-a-sentence--", result);
     }
 }

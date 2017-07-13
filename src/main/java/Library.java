@@ -50,4 +50,26 @@ public class Library {
                 .map((theKeyMap) -> theKeyMap.get(theKey))
                 .collect(Collectors.toList());
     }
+
+    public static String join(List<String> strings) {
+        if(strings == null) {
+            throw new IllegalArgumentException();
+        }
+        return strings
+                .stream()
+                .reduce((fullString, currentString) -> (fullString + " " + currentString))
+                .orElse("");
+    }
+
+    public static String join(List<String> strings, String delimeter) {
+        if(strings == null) {
+            throw new IllegalArgumentException();
+        }
+        return strings
+                .stream()
+                .reduce((fullString, currentString) -> fullString + delimeter + currentString)
+                .orElse("");
+    }
+
+
 }

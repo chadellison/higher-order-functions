@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337dcd88-79ce-4ee5-815f-25cb750a33b6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Library.java" afterPath="$PROJECT_DIR$/src/main/java/Library.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LibraryTest.java" afterPath="$PROJECT_DIR$/src/test/java/LibraryTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -22,13 +21,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LibraryTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LibraryTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/LibraryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="131" column="68" lean-forward="false" selection-start-line="131" selection-start-column="68" selection-end-line="131" selection-end-column="68" />
+            <state relative-caret-position="110">
+              <caret line="122" column="8" lean-forward="true" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
               <folding>
-                <element signature="e#0#4306#0" expanded="true" />
+                <element signature="e#0#4360#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#292#293#0" expanded="true" />
                 <element signature="e#332#333#0" expanded="true" />
@@ -43,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Library.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Library.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="316">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -369,8 +368,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/Person.java" />
-        <option value="$PROJECT_DIR$/src/test/java/LibraryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Library.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LibraryTest.java" />
       </list>
     </option>
   </component>
@@ -940,14 +939,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499958568515</updated>
-      <workItem from="1499958570232" duration="15687000" />
+      <workItem from="1499958570232" duration="16049000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LibraryTest - 2017.07.13 at 13h 39m 35s.xml">
-      <configuration name="LibraryTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LibraryTest - 2017.07.13 at 13h 59m 49s.xml">
       <configuration name="LibraryTest" configurationId="JUnit" />
     </history-entry>
@@ -975,9 +971,12 @@
     <history-entry file="LibraryTest - 2017.07.13 at 15h 13m 49s.xml">
       <configuration name="LibraryTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LibraryTest - 2017.07.13 at 15h 25m 51s.xml">
+      <configuration name="LibraryTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15687000" />
+    <option name="totallyTimeSpent" value="16049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1022" extended-state="6" />
@@ -1073,25 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/LibraryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="131" column="68" lean-forward="false" selection-start-line="131" selection-start-column="68" selection-end-line="131" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#4306#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#1250#1251#0" expanded="true" />
-            <element signature="e#1294#1295#0" expanded="true" />
-            <element signature="e#2112#2113#0" expanded="true" />
-            <element signature="e#2154#2155#0" expanded="true" />
-            <element signature="e#3214#3215#0" expanded="true" />
-            <element signature="e#3256#3257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1102,10 +1082,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="316">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LibraryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="122" column="8" lean-forward="true" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#4360#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+            <element signature="e#2112#2113#0" expanded="true" />
+            <element signature="e#2154#2155#0" expanded="true" />
+            <element signature="e#3214#3215#0" expanded="true" />
+            <element signature="e#3256#3257#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -128,7 +128,9 @@ public class LibraryTest {
         Map<String, String> keyMap3 = new HashMap<>();
         keyMap3.put("foo", "daddy");
 
-        List<String> result = Library.pluck(Arrays.asList(keyMap1, keyMap2, keyMap3), "foo");
+        List<Map<String, String>> keyMaps = Arrays.asList(keyMap1, keyMap2, keyMap3);
+
+        List<String> result = Library.pluck(keyMaps, "foo");
         assertEquals(Arrays.asList("bar", "dang", "daddy"), result);
     }
 }

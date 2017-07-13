@@ -3,9 +3,7 @@
  */
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
@@ -97,5 +95,40 @@ public class LibraryTest {
         List<Person> result = Library.removeMinors(people);
 
         assertEquals(Arrays.asList(person1, person3), result);
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void pluckThrowsAnExceptionWhenNullIsPassedIn() {
+        Library.pluck(null, "foo");
+    }
+
+    @Test
+    public void pluckReturnsAnEmptyListWhenGivenEmptyMap() {
+        List<String> result = Library.pluck(Collections.emptyList(), "foo");
+        assertEquals(Collections.emptyList(), result);
+    }
+
+    @Test
+    public void pluckReturnsAnArrayWithASingleStringWhenGivenASingleMap() {
+        Map<String, String> keyMap = new HashMap<>();
+        keyMap.put("foo", "bar");
+
+        List<String> result = Library.pluck(Arrays.asList(keyMap), "foo");
+        assertEquals(Arrays.asList("bar"), result);
+    }
+
+    @Test
+    public void pluckReturnsAnArrayOfStringsWhenGivenAnArrayOfMaps() {
+        Map<String, String> keyMap1 = new HashMap<>();
+        keyMap1.put("foo", "bar");
+
+        Map<String, String> keyMap2 = new HashMap<>();
+        keyMap2.put("foo", "dang");
+
+        Map<String, String> keyMap3 = new HashMap<>();
+        keyMap3.put("foo", "daddy");
+
+        List<String> result = Library.pluck(Arrays.asList(keyMap1, keyMap2, keyMap3), "foo");
+        assertEquals(Arrays.asList("bar", "dang", "daddy"), result);
     }
 }

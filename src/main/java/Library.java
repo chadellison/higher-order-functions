@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /*
@@ -15,6 +16,27 @@ public class Library {
         return numbers
                 .stream()
                 .filter((Integer theNumber)-> theNumber % 2 != 0)
+                .collect(Collectors.toList());
+    }
+
+    public static List<String> removeSwiftFox(List<String> foxType) {
+        if(null == foxType) {
+            throw new IllegalArgumentException();
+        }
+
+        return foxType
+                .stream()
+                .filter((String fox)-> !fox.equals("Swift Fox"))
+                .collect(Collectors.toList());
+    }
+
+    public static List<Person> removeMinors(List<Person> persons) {
+        if (null == persons) {
+            throw new IllegalArgumentException();
+        }
+        return persons
+                .stream()
+                .filter((Person thePerson)-> thePerson.getAge() > 17)
                 .collect(Collectors.toList());
     }
 }

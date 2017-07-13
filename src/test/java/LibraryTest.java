@@ -35,4 +35,67 @@ public class LibraryTest {
 
         assertEquals(Collections.emptyList(), result);
     }
+
+    @Test
+    public void removeEvenReturnsFilteredEvens() {
+        List<Integer> result = Library.removeEven(Arrays.asList(0, 2, 1, 3, 4, 5, 6));
+
+        assertEquals(Arrays.asList(1, 3, 5), result);
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void removeSwiftFoxThrowsExceptionWhenPassedNull() {
+        Library.removeSwiftFox(null);
+    }
+
+    @Test
+    public void removeSwiftFoxReturnsEmptyListWhenGivenEmptyList() {
+        List<String> result = Library.removeSwiftFox(Collections.emptyList());
+        assertEquals(Collections.emptyList(), result);
+    }
+
+    @Test
+    public void removeSwiftFoxReturnsAnEmptyListIfSwiftFoxIsGiven() {
+        List<String> result = Library.removeSwiftFox(Arrays.asList("Swift Fox"));
+        assertEquals(Collections.emptyList(), result);
+    }
+
+    @Test
+    public void removeSwiftFoxReturnsAFilteredListOfFoxes() {
+        List<String> result = Library.removeSwiftFox(Arrays.asList("Swift Fox", "Slow Fox", "Medium Fox"));
+        assertEquals(Arrays.asList("Slow Fox", "Medium Fox"), result);
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void removeMinorsThrowsExceptionWhenGivenNull() {
+        Library.removeMinors(null);
+    }
+
+    @Test
+    public void removeMinorsReturnsEmptyListIfEmptyListIsGiven() {
+        List<Person> result = Library.removeMinors(Collections.emptyList());
+        assertEquals(Collections.emptyList(), result);
+    }
+
+    @Test
+    public void removeMinorsReturnsAnAdult() {
+        Person person = new Person("John", "Jones", 17);
+        List<Person> people = Arrays.asList(person);
+
+        List<Person> result = Library.removeMinors(people);
+
+        assertEquals(Collections.emptyList(), result);
+    }
+
+    @Test
+    public void removeMinorsFiltersOutMinors() {
+        Person person1 = new Person("John", "Jones", 18);
+        Person person2 = new Person("Oscar", "Smith", 12);
+        Person person3 = new Person("Frank", "Lee", 34);
+        List<Person> people = Arrays.asList(person1, person2, person3);
+
+        List<Person> result = Library.removeMinors(people);
+
+        assertEquals(Arrays.asList(person1, person3), result);
+    }
 }
